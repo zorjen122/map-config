@@ -1,0 +1,360 @@
+// vim of the some space
+  "vim.easymotion": true,
+  "vim.vimrc.enable": true,
+  "vim.leader": ";",
+  "vim.cursorStylePerMode.normal": "line",
+  "vim.cursorStylePerMode.visual": "line",
+  "vim.cursorStylePerMode.replace": "line",
+  // keboder of vim to vscode.
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-x>": false,
+    "<C-c>": false,
+    "<C-h>": false,
+    "<C-w>": false,
+    "<C-,>": false,
+    "<C-v>": false,
+    // "<C-d>": false,
+  },
+  // "vim.useCtrlKeys": false,
+  /** 
+    
+    
+    * Which key plug-in of set
+
+
+    */
+  "vim.normalModeKeyBindings": [
+    { // which key
+      "before": [
+        "<space>"
+      ],
+      "commands": [
+        "whichkey.show"
+      ]
+    },
+    {
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "extension.dash.specific"
+      ]
+    },
+  ],
+  "vim.visualModeKeyBindings": [
+    { // which key
+      "before": [
+        "<space>"
+      ],
+      "commands": [
+        "whichkey.show"
+      ]
+    },
+    // repeatly indent in visual mode
+    {
+      "before": [
+        ">"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ]
+    },
+    {
+      "before": [
+        "<"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "f"
+      ],
+      "commands": [
+        "editor.action.formatDocument"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t"
+      ],
+      "commands": [
+        "editor.action.revealDefinition"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "q"
+      ],
+      "commands": [
+        "editor.action.referenceSearch.trigger"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "Q"
+      ],
+      "commands": [
+        "references-view.findReferences"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "i",
+        "n"
+      ],
+      "commands": [
+        "references-view.showCallHierarchy"
+      ]
+    },
+    // -- run
+    {
+      "before": [
+        "<leader>",
+        "r"
+      ],
+      "commands": [
+        "workbench.action.files.save",
+        "workbench.action.debug.run"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "d",
+        "r"
+      ],
+      "commands": [
+        "workbench.action.files.save",
+        "workbench.action.debug.start"
+      ]
+    },
+    // -- debug
+    {
+      "before": [
+        "<leader>",
+        "d",
+        "b"
+      ],
+      "commands": [
+        "editor.debug.action.toggleBreakpoint"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "d",
+        "c"
+      ],
+      "commands": [
+        "editor.debug.action.conditionalBreakpoint"
+      ]
+    },
+    // -- problem nav
+    {
+      "before": [
+        "<leader>",
+        "d",
+        "k"
+      ],
+      "commands": [
+        "editor.action.marker.prev"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "d",
+        "j"
+      ],
+      "commands": [
+        "editor.action.marker.next"
+      ]
+    },
+    // -- git hunk nav
+    {
+      "before": [
+        "<leader>",
+        "h",
+        "k"
+      ],
+      "commands": [
+        "workbench.action.editor.previousChange",
+        "editor.action.dirtydiff.previous"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "h",
+        "j"
+      ],
+      "commands": [
+        "workbench.action.editor.nextChange",
+        "editor.action.dirtydiff.next"
+      ]
+    },
+    // git (un)stage 
+    {
+      "before": [
+        "<leader>",
+        "h",
+        "s"
+      ],
+      "commands": [
+        "git.stage",
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "h",
+        "u"
+      ],
+      "commands": [
+        "git.unstage",
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "h",
+        "r"
+      ],
+      "commands": [
+        "git.revertSelectedRanges",
+      ]
+    },
+    // -- rename symbol
+    {
+      "before": [
+        "<leader>",
+        "r",
+        "n"
+      ],
+      "commands": [
+        "editor.action.rename",
+      ]
+    },
+    // Vim ctrl+d and ctrl+u change of lader j and k
+    {
+      "before": [
+        "<leader>",
+        "j"
+      ],
+      "commands": [
+        "workbench.action.terminal.scrollUpPage",
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "k"
+      ],
+      "commands": [
+        "editor.action.rename",
+      ]
+    },
+  ],
+  /* which key bindings */
+  "whichkey.bindings": [
+    {
+      "key": "e",
+      "name": "Show tree/explorer view",
+      "type": "conditional",
+      "bindings": [
+        {
+          "key": "",
+          "name": "default",
+          "type": "command",
+          "command": "workbench.view.explorer"
+        },
+        {
+          "key": "when:sideBarVisible && explorerViewletVisible",
+          "name": "Hide explorer",
+          "type": "command",
+          "command": "workbench.action.toggleSidebarVisibility"
+        }
+      ],
+    },
+    {
+      // ourline of space+o and space+d
+      "key": "o",
+      "name": "Outline",
+      "type": "conditional",
+      "bindings": [
+        {
+          "key": "",
+          "name": "default",
+          "type": "command",
+          "command": "extension.multiCommand.execute",
+          "args": {
+            "sequence": [
+              "outline.focus",
+              "outline.focus",
+            ]
+          },
+        },
+        {
+          "key": "when:outlinerExplorerView.active && view.outline.visible",
+          "name": "Hide outline",
+          "type": "command",
+          "command": "workbench.action.toggleAuxiliaryBar"
+        }
+      ],
+    },
+    {
+      "key": "g",
+      "name": "Source contrl",
+      "type": "command",
+      "command": "workbench.view.scm",
+    },
+    {
+      "command": "workbench.action.quickOpen",
+      "key": "f",
+      "name": "Find file",
+      "type": "command"
+    },
+    {
+      "command": "workbench.view.search",
+      "key": "F",
+      "name": "Search Word",
+      "type": "command"
+    },
+    {
+      "command": "search.action.openEditor",
+      "key": "w",
+      "name": "New Search Editor",
+      "type": "command"
+    },
+    {
+      "command": "workbench.action.gotoSymbol",
+      "key": "s",
+      "name": "Search document symbol",
+      "type": "command"
+    },
+    {
+      "command": "workbench.action.showAllSymbols",
+      "key": "S",
+      "name": "Search project symbol",
+      "type": "command"
+    },
+  ],
+  /* vim settings start */
+  "vim.camelCaseMotion.enable": true,
+  // "vim.easymotion": true,   //Duplicate object keyjson(520)
+  "vim.foldfix": true, // to avoid fold open up autocamatically
+  "vim.sneak": false,
+  "vim.surround": true,
+  "vim.useCtrlKeys": false,
+  "vim.useSystemClipboard": true,
