@@ -15,16 +15,8 @@
     "<C-w>": false,
     "<C-,>": false,
     "<C-v>": false,
-    // "<C-d>": false,
   },
-  // "vim.useCtrlKeys": false,
-  /** 
-    
-    
-    * Which key plug-in of set
-
-
-    */
+//* Which key plug-in of set
   "vim.normalModeKeyBindings": [
     { // which key
       "before": [
