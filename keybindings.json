@@ -1,5 +1,4 @@
-// 默认 setti
-// Change of vim key 
+//* Change vim key 
 [
 	{ // make cursor back to editor
 		"key": "ctrl+shift+c",
@@ -171,11 +170,6 @@
 		"command": "list.focusUp",
 		"when": "panelFocus && activePanel == 'workbench.panel.markers' "
 	},
-	// {
-	// 	"key": "tab",
-	// 	"command": "selectNextSuggestion",
-	// 	"when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-	// },
 	{
 		"key": "shift+tab",
 		"command": "selectPrevSuggestion",
